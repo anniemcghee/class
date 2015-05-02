@@ -1,22 +1,28 @@
-document.addEventListener('DOMContentLoaded', function(){
-  var button1 = document.querySelector('.btn');
-  var button2 = document.querySelector('#refresh')
 
-  button2.addEventListener('click', function(){
-      document.querySelector('.form-control').value="";
-      document.querySelector("h2").innerHTML="";
+document.addEventListener('DOMContentLoaded',function(){
+  var convertButton = document.getElementById('submit');
+  var clearButton = document.getElementById('clear');
+  var convertTemp = function(F) {
+    var C = Math.round((F - 32) / 1.8);
+    return C;
+    console.log(C);
+  }
+
+  convertButton.addEventListener('click',function(){
+    var inputTemp = document.getElementById('tmpOrig').value;
+    console.log(inputTemp);
+    var C = convertTemp(inputTemp);
+    console.log(C);
+    this.style.backgroundColor="grey";
+    document.getElementById('tmpFinal').value = C;
   });
 
-  button1.addEventListener('click', function(){
-    var farInputTemp = parseInt(document.querySelector('.form-control').value);
-
-      if (isNaN(farInputTemp)) {
-        document.querySelector("h2").innerHTML = "That was a number, like, yesterday. Try again."
-      }
-      else {
-        var celResult = ((farInputTemp-32)*(5 / 9)).toFixed(0);
-        document.querySelector("h2").innerHTML= "It's " +celResult+ " &deg;C. I only use Celsius.";
-      }
+  clearButton.addEventListener('click',function(){
+    console.log('alert')
+    var clearTemp = "";
+    document.getElementById('tmpOrig').value = clearTemp;
+    document.getElementById('tmpFinal').value = clearTemp;
+    document.getElementById('submit').style.backgroundColor="white";
+    document.getElementById('clear').style.backgroundColor="grey";
   });
-
 });

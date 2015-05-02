@@ -1,1 +1,27 @@
 /*I'm a stylesheet!*/
+
+body {
+/* CHANGE FONT FAMILY TO VERDANA
+    FONT SIZE TO 12PX*/
+}
+
+h1 {
+  /*  CHANGE COLOR */
+}
+
+h2 {
+  /*  CHANGE COLOR */
+}
+
+h3 {
+  /*  CHANGE COLOR */
+}
+
+.header-style {
+/*  ADD TEXT DECORATION BOLD     */
+}
+
+img {
+  /* dashed border */
+  /* show solution with border-radius */
+}

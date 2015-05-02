@@ -1,28 +1,29 @@
-<!DOCTYPE html>
+<!DOCTYPE>
 <html>
 <head>
   <title>Temperature Converter</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js"></script>
+  <link href="styles.css" rel="stylesheet">
+  <script src="temp_convert.js"></script>
 </head>
+
+<style>
+</style>
+
 <body>
+
 <div class="container">
-  <div class="row">
-    <div class="page-header text-center">
-      <h1>Hipsterverter. <small>Convert to Celsius without the rest of them.</small></h1>
-    </div>
-  </div>
-  <div class="row text-center">
-      <input type="text" class="form-control" placeholder="What's the temp in Fahrenheit, brah?"> <!-- add a column so you can md-4 md-3 offset to shrink and center it -->
-      <button type="button" class="btn btn-default"> Convert! </button>
-      <button type="button" class="btn btn-default" id="refresh"><span class="glyphicon glyphicon-refresh"></span></button>
-  </div>
-  <hr>
+  <h1>Temperature Converter</h1>
+<hr>
 
-  <div class="row text-center">
-      <h2></h2>
-  </div>
+    <input type="tempInput" class="inputs" id="tmpOrig" placeholder="Enter Temp">
+    <button type="submit" id="submit">Convert</button>
+    <input type="tempOutput" class="inputs" id="tmpFinal" placeholder="Result">
+    <button type="clr" id="clear">Clear</button>
 
+</div>
+
+<div class="container">
+  <img src="http://wcdn4.dataknet.com/static/resources/icons/set113/d08a9b33.png">
 </div>
 
 </body>
